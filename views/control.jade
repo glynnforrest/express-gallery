@@ -1,9 +1,11 @@
 extends layout
 
 block append js
+  script(src='/js/client.js')
   script(src='/js/control.js')
 
 block content
   h1= title
   a(class='previous' href='javascript:;') Previous
   a(class='next' href='javascript:;') Next
+  div(class='image-box')
