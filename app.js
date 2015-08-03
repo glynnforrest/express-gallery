@@ -6,13 +6,14 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var fs = require('fs');
 
-var imageDirectory = process.argv[2] ? process.argv[2] : path.join(__dirname, 'test_images')
+var imageDirectory = process.argv[2] ? process.argv[2] : path.join(__dirname, 'images')
 
 app.use('/', routes);
 
 fs.readdir(imageDirectory ,function(err,files){
     if(err) {
-        throw err;
+        console.log('ERROR - Unable to read from '+imageDirectory);
+        process.exit(1);
     }
     var images = [];
     files.forEach(function(file){
