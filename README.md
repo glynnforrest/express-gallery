@@ -5,14 +5,12 @@ Share a directory of images using express and socket.io.
 ## Setup
 
 ```bash
-npm install
-bower install
+make install
 ```
 
 ## Run
 
 ```bash
-grunt sass
 # node app.js <path/to/images>
 node app.js ~/Pictures
 ```
@@ -23,7 +21,7 @@ argument to change the directory.
 For development:
 
 ```bash
-grunt
+gulp
 ```
 
 ## Use
